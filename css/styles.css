@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
 }
 
@@ -19,7 +19,7 @@ a {
 }
 
 p {
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 /* ====== Nav and Header Styles ======= */
@@ -74,7 +74,7 @@ h1 {
 }
 
 .main-content h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin-top: 1.5em;
     margin-bottom: 0;
     color: #202020;
@@ -93,8 +93,6 @@ h1 {
 }
 
 /*=====Contact and footer=====*/
-
-/* NEEDS MORE WORK */
 .contact {
     padding-top: 1.5em;
     padding-bottom: 5em;
@@ -103,9 +101,19 @@ h1 {
 .footer {
     background-color: #f5f5f5;
     position: relative;
-    padding: 1em 1.5em;
+    padding: 2em 1.5em 4em;
 }
 
+.contact-info {
+    font-weight: 900;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+hr {
+    margin-bottom: 25px;
+    border-color: lightgrey;
+}
 
 .footer-name {
     float: left;
@@ -127,7 +135,12 @@ h1 {
   }
 
 /*=====Media Queries=====*/
+    /*=====Tablet=====*/
 @media (min-width: 768px) {
+    h1 {
+        padding-top: 25px;
+    }
+
     .main-nav li {
         display: inline-block;
         background-color: transparent;
@@ -136,7 +149,7 @@ h1 {
     }
 
     .main-nav ul {
-        padding-top: 2em;
+        padding-top: 1em;
         padding-bottom: 2em;
     }
     
@@ -148,12 +161,41 @@ h1 {
         float: right;
         width: 33%;
         margin: 0;
+        margin-left: 30px;
     }
 
     .chunk {
         float: left;
         width: 50%;
         padding-right: 15px;
-        min-height: 518.5px;
+        min-height: 523.5px;
+    }
+
+    .top-link {
+        display: none;
+    }
+
+    .jump-links {
+        display: block;
+    }
+
+    .jump-links li {
+        display: inline-block;
+        float: right;
+        margin-left: 15px;
+    }
+}
+    /*=====Desktop=====*/
+@media (min-width: 1024px) {
+    h1 {
+        float: left;
+    }
+
+    .chunk {
+        width: 33%
+    }
+
+    .main-nav {
+        float: right;
     }
 }
